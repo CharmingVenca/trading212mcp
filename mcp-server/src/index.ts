@@ -1,8 +1,6 @@
 /**
- * Trading212 MCP Server and Library
+ * Trading212 MCP Server and Library entry point
  * 
- * This file serves as the library entry point, exporting the Trading212 client
- * and all associated types for programmatic use.
  */
 
 export { Trading212Client } from "./services/trading212-client.js";

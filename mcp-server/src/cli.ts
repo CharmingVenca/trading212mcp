@@ -5,7 +5,7 @@ import pkg from '../package.json' with { type: 'json' };
 
 
 /**
- * Main entry point to start the MCP server over stdio and HTTP
+ * The main entry point to start the MCP server over stdio and HTTP
  * Parses command-line arguments and environment variables for API keys, base URL, and debug settings
  * initializes and starts the Trading212Client and Trading212McpServer
  */
