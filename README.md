@@ -19,14 +19,14 @@ npm install "@vaclavklimes/trading212mcp"
 Run the server using `npx`:
 
 ```bash
-npx trading212mcp --t212-api-key=YOUR_API_KEY --t212-secret-key=YOUR_SECRET_KEY --t212-base-url=https://demo.trading212.com
+npx trading212mcp --t212-api-key=YOUR_API_KEY --t212-secret-key=YOUR_SECRET_KEY --t212-base-url=YOUR_BASE_URL
 ```
 
 ### Command Line Options
 
 - `--t212-api-key`: Your Trading212 API key.
 - `--t212-secret-key`: Your Trading212 secret key.
-- `--t212-base-url`: The API base URL (defaults to demo environment if configured).
+- `--t212-base-url`: The API base URL (e.g., `https://demo.trading212.com` or `https://live.trading212.com`). This is a required argument or environment variable (`TRADING212_BASE_URL`).
 - `--port`: HTTP port (defaults to 3000).
 
 ## Library Usage
@@ -37,7 +37,7 @@ npx trading212mcp --t212-api-key=YOUR_API_KEY --t212-secret-key=YOUR_SECRET_KEY 
 import { Trading212Client } from '@vaclavklimes/trading212mcp';
 
 const client = new Trading212Client(
-  'https://demo.trading212.com',
+  'YOUR_BASE_URL',
   'your-api-key',
   'your-secret-key'
 );

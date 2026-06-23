@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import { Trading212Client } from './services/trading212-client.js';
 import { Trading212McpServer } from './server.js';
+import pkg from '../package.json' with { type: 'json' };
 
-const PKG_NAME = "@vaclavklimes/trading212mcp";
-const PKG_VERSION = "0.1.0";
 
 /**
  * Main entry point to start the MCP server over stdio and HTTP.
@@ -13,28 +12,28 @@ async function main() {
     const secretKeyArg = process.argv.find(arg => arg.startsWith('--t212-secret-key='));
     const baseUrlArg = process.argv.find(arg => arg.startsWith('--t212-base-url='));
 
-    console.error('\[mcp\] Starting Trading212 MCP Server v' + PKG_VERSION);
+    console.error('\[mcp\] Starting Trading212 MCP Server v' + pkg.version);
 
     const apiKey = apiKeyArg?.split('=')[1] ?? process.env.TRADING212_API_KEY ?? process.env.T212_API_KEY_ID;
     const secretKey = secretKeyArg?.split('=')[1] ?? process.env.TRADING212_SECRET_KEY ?? process.env.T212_SECRET_KEY;
     const baseUrl = baseUrlArg?.split('=')[1] ?? process.env.TRADING212_BASE_URL;
 
     if (!apiKey) {
-        throw new Error('Trading212 API Key is required (via --t212-api-key or TRADING212_API_KEY env var)');
+        throw new Error('Trading212 API Key is required (e.g., via --t212-api-key=YOUR_API_KEY or TRADING212_API_KEY env var)');
     }
     if (!secretKey) {
-        throw new Error('Trading212 Secret Key is required (via --t212-secret-key or TRADING212_SECRET_KEY env var)');
+        throw new Error('Trading212 Secret Key is required (e.g., via --t212-secret-key=YOUR_SECRET_KEY or TRADING212_SECRET_KEY env var)');
     }
     if (!baseUrl) {
-        throw new Error('Trading212 Base URL is required (via --t212-base-url or TRADING212_BASE_URL env var)');
+        throw new Error('Trading212 Base URL is required (e.g., via --t212-base-url=YOUR_BASE_URL or TRADING212_BASE_URL env var)');
     }
 
     console.error('\[mcp\] Base URL: ' + baseUrl);
 
     const client = new Trading212Client(baseUrl, apiKey, secretKey);
     const mcpServer = new Trading212McpServer({
-        name: PKG_NAME,
-        version: PKG_VERSION,
+        name: pkg.name,
+        version: pkg.version,
         client
     });
 

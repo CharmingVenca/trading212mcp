@@ -1,0 +1,26 @@
+# My stuff
+.idea/
+*.env
+node_modules/
+dist/
+*.iml
+.tradingagents/
+.DS_Store
+.venv/
+mcp-server/config.json
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# OS specific
+.DS_Store
+
+# Temporary files
+*.log
+*.tmp

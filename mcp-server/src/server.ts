@@ -4,6 +4,7 @@ import { NodeStreamableHTTPServerTransport } from "@modelcontextprotocol/node";
 import { createServer, Server as HttpServer } from "node:http";
 import { randomUUID } from "node:crypto";
 import { Trading212Client } from "./services/trading212-client.js";
+import pkg from "../package.json" with { type: "json" };
 import { registerGetAccountSummary } from "./resources/getAccountSummary.js";
 import { registerGetAllAvailableInstruments } from "./resources/getAllAvailableInstruments.js";
 import { registerGetExchangesMetadata } from "./resources/getExchangesMetadata.js";
@@ -41,8 +42,8 @@ export class Trading212McpServer {
 
     constructor(options: Trading212McpServerOptions) {
         this.client = options.client;
-        this.name = options.name ?? "trading212-mcp";
-        this.version = options.version ?? "0.1.0";
+        this.name = options.name ?? pkg.name;
+        this.version = options.version ?? pkg.version;
         this.server = this.createMcpInstance(this.name, this.version);
     }
 
