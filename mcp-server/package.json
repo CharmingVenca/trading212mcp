@@ -1,6 +1,6 @@
 {
   "name": "@vaclavklimes/trading212mcp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "An MCP server for the Trading212 API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
