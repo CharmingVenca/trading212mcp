@@ -111,4 +111,4 @@ For detailed API documentation please refer to the [Detailed API Documentation](
 
 ## License
 
-ISC
+MIT

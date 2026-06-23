@@ -23,7 +23,7 @@
   },
   "keywords": [],
   "author": "Václav Klimeš",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@cfworker/json-schema": "^4.1.1",
