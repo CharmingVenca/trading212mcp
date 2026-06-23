@@ -5,7 +5,7 @@ An MCP server for the Trading212 API. It can be used both as a standalone server
 ## Features
 
 - **MCP Server**: Integrated resources and tools for account summaries, instruments, orders, and positions.
-- **Library**: Exported `Trading212Client` and type definitions for direct API integration.
+- **Library**: Exported `Trading212Client` and type definitions.
 - **Transports**: Supports both Stdio and HTTP transports.
 
 ## Installation
@@ -26,7 +26,7 @@ npx trading212mcp --t212-api-key=YOUR_API_KEY --t212-secret-key=YOUR_SECRET_KEY 
 
 - `--t212-api-key`: Your Trading212 API key.
 - `--t212-secret-key`: Your Trading212 secret key.
-- `--t212-base-url`: The API base URL (e.g., `https://demo.trading212.com` or `https://live.trading212.com`). This is a required argument or environment variable (`TRADING212_BASE_URL`).
+- `--t212-base-url`: The API base URL (e.g., `https://demo.trading212.com/api/v0` or `https://live.trading212.com/api/v0`).
 - `--port`: HTTP port (defaults to 3000).
 
 ## Library Usage
@@ -65,7 +65,7 @@ await mcpServer.startHttp(3000);
 
 ## Documentation
 
-For detailed API documentation, including all available resources, tools, and type definitions, please refer to the [Detailed API Documentation](docs/README.md).
+For detailed API documentation please refer to the [Detailed API Documentation](docs/README.md).
 
 ## License
 
