@@ -39,7 +39,7 @@ export class RateLimiter {
         if (this.remaining <= 0 && this.reset > now) {
             const waitTime = (this.reset - now) * 1000;
             console.warn(`[RateLimiter] Rate limit exceeded. Waiting for ${waitTime.toFixed(0)}ms until ${new Date(this.reset * 1000).toLocaleTimeString()}.`);
-            await new Promise(resolve => setTimeout(resolve, waitTime + 100)); // Add a small buffer
+            await new Promise(resolve => setTimeout(resolve, waitTime + 100));
             if (this.debug) {
                 console.error(`[RateLimiter] Resuming after wait.`);
             }
