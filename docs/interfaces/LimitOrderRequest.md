@@ -6,9 +6,9 @@
 
 # Interface: LimitOrderRequest
 
-Defined in: [types/orders.ts:51](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L51)
+Defined in: [types/orders.ts:73](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L73)
 
-Request body for placing a limit order.
+Request body for placing a limit order
 
 ## Properties
 
@@ -16,7 +16,9 @@ Request body for placing a limit order.
 
 > **limitPrice**: `number`
 
-Defined in: [types/orders.ts:52](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L52)
+Defined in: [types/orders.ts:74](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L74)
+
+price at which the order should be executed or better
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/orders.ts:52](https://github.com/CharmingVenca/trading212mcp/
 
 > **quantity**: `number`
 
-Defined in: [types/orders.ts:53](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L53)
+Defined in: [types/orders.ts:75](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L75)
+
+number of shares or units to buy/sell
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/orders.ts:53](https://github.com/CharmingVenca/trading212mcp/
 
 > **ticker**: `string`
 
-Defined in: [types/orders.ts:54](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L54)
+Defined in: [types/orders.ts:76](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L76)
+
+ticker symbol of the instrument
 
 ***
 
@@ -40,4 +46,6 @@ Defined in: [types/orders.ts:54](https://github.com/CharmingVenca/trading212mcp/
 
 > **timeValidity**: [`TimeInForce`](../type-aliases/TimeInForce.md)
 
-Defined in: [types/orders.ts:55](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L55)
+Defined in: [types/orders.ts:77](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L77)
+
+time in force policy for the order

@@ -6,9 +6,9 @@
 
 # Interface: ReportResponse
 
-Defined in: [types/reports.ts:28](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L28)
+Defined in: [types/reports.ts:41](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L41)
 
-Metadata for a generated or pending report.
+Metadata for a generated or pending report
 
 ## Properties
 
@@ -16,7 +16,9 @@ Metadata for a generated or pending report.
 
 > **dataIncluded**: [`ReportDataIncluded`](ReportDataIncluded.md)
 
-Defined in: [types/reports.ts:29](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L29)
+Defined in: [types/reports.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L42)
+
+the data categories included in the report
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/reports.ts:29](https://github.com/CharmingVenca/trading212mcp
 
 > `optional` **downloadLink?**: `string`
 
-Defined in: [types/reports.ts:30](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L30)
+Defined in: [types/reports.ts:43](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L43)
+
+optional, the link to download the report if it's finished
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/reports.ts:30](https://github.com/CharmingVenca/trading212mcp
 
 > **reportId**: `number`
 
-Defined in: [types/reports.ts:31](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L31)
+Defined in: [types/reports.ts:44](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L44)
+
+unique identifier for the report
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/reports.ts:31](https://github.com/CharmingVenca/trading212mcp
 
 > **status**: [`ExportStatus`](../type-aliases/ExportStatus.md)
 
-Defined in: [types/reports.ts:32](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L32)
+Defined in: [types/reports.ts:45](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L45)
+
+current status of the report generation
 
 ***
 
@@ -48,7 +56,9 @@ Defined in: [types/reports.ts:32](https://github.com/CharmingVenca/trading212mcp
 
 > **timeFrom**: `string`
 
-Defined in: [types/reports.ts:33](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L33)
+Defined in: [types/reports.ts:46](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L46)
+
+start time for the report data
 
 ***
 
@@ -56,4 +66,6 @@ Defined in: [types/reports.ts:33](https://github.com/CharmingVenca/trading212mcp
 
 > **timeTo**: `string`
 
-Defined in: [types/reports.ts:34](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L34)
+Defined in: [types/reports.ts:47](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L47)
+
+end time for the report data

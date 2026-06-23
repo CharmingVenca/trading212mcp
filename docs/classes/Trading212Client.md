@@ -6,20 +6,18 @@
 
 # Class: Trading212Client
 
-Defined in: [services/trading212-client.ts:22](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L22)
+Defined in: [services/trading212-client.ts:27](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L27)
 
-Trading212 MCP Server and Library
-
-This file serves as the library entry point, exporting the Trading212 client
-and all associated types for programmatic use.
+Client for interacting with the Trading212 API
+Provides methods to fetch account information, manage orders, and retrieve historical data
 
 ## Constructors
 
 ### Constructor
 
-> **new Trading212Client**(`baseUrl`, `apiKey`, `apiSecret`): `Trading212Client`
+> **new Trading212Client**(`baseUrl`, `apiKey`, `apiSecret`, `disableRateLimiting?`, `debug?`): `Trading212Client`
 
-Defined in: [services/trading212-client.ts:29](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L29)
+Defined in: [services/trading212-client.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L42)
 
 #### Parameters
 
@@ -27,13 +25,31 @@ Defined in: [services/trading212-client.ts:29](https://github.com/CharmingVenca/
 
 `string`
 
+base URL for the API
+
 ##### apiKey
 
 `string`
 
+API key for authentication
+
 ##### apiSecret
 
 `string`
+
+API secret for authentication
+
+##### disableRateLimiting?
+
+`boolean` = `false`
+
+Optional, if true -> disables API rate limiting. Defaults to false.
+
+##### debug?
+
+`boolean` = `false`
+
+Optional, if true -> enables debug logging. Defaults to false.
 
 #### Returns
 
@@ -45,9 +61,9 @@ Defined in: [services/trading212-client.ts:29](https://github.com/CharmingVenca/
 
 > **cancelPendingOrder**(`orderId`): `Promise`\<`void`\>
 
-Defined in: [services/trading212-client.ts:221](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L221)
+Defined in: [services/trading212-client.ts:307](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L307)
 
-Cancels a specific pending order.
+Cancels a specific pending order
 
 #### Parameters
 
@@ -55,9 +71,13 @@ Cancels a specific pending order.
 
 `string`
 
+The ID of the order to cancel
+
 #### Returns
 
 `Promise`\<`void`\>
+
+A promise that resolves when the order has been successfully canceled
 
 ***
 
@@ -65,9 +85,9 @@ Cancels a specific pending order.
 
 > **fetchAllOpenPositions**(`ticker?`): `Promise`\<[`Positions`](../type-aliases/Positions.md)\>
 
-Defined in: [services/trading212-client.ts:179](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L179)
+Defined in: [services/trading212-client.ts:255](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L255)
 
-Fetches all open positions across all pages.
+Fetches all open positions across all pages
 
 #### Parameters
 
@@ -75,9 +95,13 @@ Fetches all open positions across all pages.
 
 `string`
 
+Optional. Filters positions by a specific ticker symbol
+
 #### Returns
 
 `Promise`\<[`Positions`](../type-aliases/Positions.md)\>
+
+A promise that resolves with an array of open positions
 
 ***
 
@@ -85,11 +109,15 @@ Fetches all open positions across all pages.
 
 > **getAccountSummary**(): `Promise`\<[`AccountSummary`](../interfaces/AccountSummary.md)\>
 
-Defined in: [services/trading212-client.ts:83](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L83)
+Defined in: [services/trading212-client.ts:135](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L135)
+
+Retrieves the summary of the trading account
 
 #### Returns
 
 `Promise`\<[`AccountSummary`](../interfaces/AccountSummary.md)\>
+
+A promise that resolves with the account summary
 
 ***
 
@@ -97,11 +125,15 @@ Defined in: [services/trading212-client.ts:83](https://github.com/CharmingVenca/
 
 > **getAllAvailableInstruments**(): `Promise`\<[`Instruments`](../type-aliases/Instruments.md)\>
 
-Defined in: [services/trading212-client.ts:87](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L87)
+Defined in: [services/trading212-client.ts:143](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L143)
+
+Retrieves all available instruments with caching
 
 #### Returns
 
 `Promise`\<[`Instruments`](../type-aliases/Instruments.md)\>
+
+A promise that resolves with an array of available instruments
 
 ***
 
@@ -109,11 +141,15 @@ Defined in: [services/trading212-client.ts:87](https://github.com/CharmingVenca/
 
 > **getAllPendingOrders**(): `Promise`\<[`PendingOrders`](../type-aliases/PendingOrders.md)\>
 
-Defined in: [services/trading212-client.ts:79](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L79)
+Defined in: [services/trading212-client.ts:127](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L127)
+
+Retrieves all pending orders for the account
 
 #### Returns
 
 `Promise`\<[`PendingOrders`](../type-aliases/PendingOrders.md)\>
+
+A promise that resolves with an array of pending orders
 
 ***
 
@@ -121,9 +157,9 @@ Defined in: [services/trading212-client.ts:79](https://github.com/CharmingVenca/
 
 > **getDividends**(`cursor?`, `ticker?`, `limit?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`DividendItem`](../interfaces/DividendItem.md)\>\>
 
-Defined in: [services/trading212-client.ts:126](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L126)
+Defined in: [services/trading212-client.ts:189](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L189)
 
-Retrieves a paginated list of paid-out dividends.
+Retrieves a paginated list of paid-out dividends
 
 #### Parameters
 
@@ -131,17 +167,25 @@ Retrieves a paginated list of paid-out dividends.
 
 `number`
 
+Optional, used for pagination to indicate where to start fetching
+
 ##### ticker?
 
 `string`
+
+Optional, filters dividends by a ticker
 
 ##### limit?
 
 `number`
 
+Optional, the maximum number of dividends to return. Defaults to a server-side value if not specified
+
 #### Returns
 
 `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`DividendItem`](../interfaces/DividendItem.md)\>\>
+
+A promise that resolves with a paginated response containing dividend items
 
 ***
 
@@ -149,13 +193,15 @@ Retrieves a paginated list of paid-out dividends.
 
 > **getExchangesMetadata**(): `Promise`\<[`Exchanges`](../type-aliases/Exchanges.md)\>
 
-Defined in: [services/trading212-client.ts:103](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L103)
+Defined in: [services/trading212-client.ts:160](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L160)
 
-Retrieves all exchange metadata with caching.
+Retrieves all exchange metadata
 
 #### Returns
 
 `Promise`\<[`Exchanges`](../type-aliases/Exchanges.md)\>
+
+A promise that resolves with an object containing exchange metadata
 
 ***
 
@@ -163,9 +209,9 @@ Retrieves all exchange metadata with caching.
 
 > **getHistoricalOrders**(`cursor?`, `ticker?`, `limit?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`HistoricalOrder`](../interfaces/HistoricalOrder.md)\>\>
 
-Defined in: [services/trading212-client.ts:139](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L139)
+Defined in: [services/trading212-client.ts:206](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L206)
 
-Retrieves a paginated list of historical orders.
+Retrieves a paginated list of historical orders
 
 #### Parameters
 
@@ -173,17 +219,25 @@ Retrieves a paginated list of historical orders.
 
 `number`
 
+Optional, used for pagination to indicate where to start fetching
+
 ##### ticker?
 
 `string`
+
+Optional, filters historical orders by a specific ticker symbol
 
 ##### limit?
 
 `number`
 
+Optional, the maximum number of historical orders to return. Defaults to a server-side value if not specified
+
 #### Returns
 
 `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`HistoricalOrder`](../interfaces/HistoricalOrder.md)\>\>
+
+A promise that resolves with a paginated response containing historical order items
 
 ***
 
@@ -191,9 +245,9 @@ Retrieves a paginated list of historical orders.
 
 > **getPendingOrderById**(`orderId`): `Promise`\<[`Order`](../interfaces/Order.md)\>
 
-Defined in: [services/trading212-client.ts:119](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L119)
+Defined in: [services/trading212-client.ts:178](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L178)
 
-Retrieves a specific pending order by ID.
+Retrieves a specific pending order by ID
 
 #### Parameters
 
@@ -201,9 +255,13 @@ Retrieves a specific pending order by ID.
 
 `string`
 
+The ID of the order to retrieve
+
 #### Returns
 
 `Promise`\<[`Order`](../interfaces/Order.md)\>
+
+A promise that resolves with the order details
 
 ***
 
@@ -211,9 +269,9 @@ Retrieves a specific pending order by ID.
 
 > **getTransactions**(`cursor?`, `time?`, `limit?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`any`\>\>
 
-Defined in: [services/trading212-client.ts:152](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L152)
+Defined in: [services/trading212-client.ts:223](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L223)
 
-Retrieves a paginated list of account transactions.
+Retrieves a paginated list of account transactions
 
 #### Parameters
 
@@ -221,17 +279,25 @@ Retrieves a paginated list of account transactions.
 
 `string`
 
+Optional, used for pagination to indicate where to start fetching
+
 ##### time?
 
 `string`
+
+Optional, filters transactions by time
 
 ##### limit?
 
 `number`
 
+Optional, the maximum number of transactions to return. Defaults to a server-side value if not specified
+
 #### Returns
 
 `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`any`\>\>
+
+A promise that resolves with a paginated response containing transaction items
 
 ***
 
@@ -239,13 +305,15 @@ Retrieves a paginated list of account transactions.
 
 > **listReports**(): `Promise`\<[`ReportResponse`](../interfaces/ReportResponse.md)[]\>
 
-Defined in: [services/trading212-client.ts:165](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L165)
+Defined in: [services/trading212-client.ts:237](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L237)
 
-Lists all available account reports.
+Lists all available account reports
 
 #### Returns
 
 `Promise`\<[`ReportResponse`](../interfaces/ReportResponse.md)[]\>
+
+A promise that resolves with an array of report responses
 
 ***
 
@@ -253,9 +321,9 @@ Lists all available account reports.
 
 > **placeLimitOrder**(`order`): `Promise`\<[`Order`](../interfaces/Order.md)\>
 
-Defined in: [services/trading212-client.ts:191](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L191)
+Defined in: [services/trading212-client.ts:269](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L269)
 
-Places a new limit order.
+Places a new limit order
 
 #### Parameters
 
@@ -263,9 +331,13 @@ Places a new limit order.
 
 [`LimitOrderRequest`](../interfaces/LimitOrderRequest.md)
 
+The limit order request details
+
 #### Returns
 
 `Promise`\<[`Order`](../interfaces/Order.md)\>
+
+A promise that resolves with the details of the placed order
 
 ***
 
@@ -273,9 +345,9 @@ Places a new limit order.
 
 > **placeMarketOrder**(`order`): `Promise`\<[`Order`](../interfaces/Order.md)\>
 
-Defined in: [services/trading212-client.ts:198](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L198)
+Defined in: [services/trading212-client.ts:278](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L278)
 
-Places a new market order.
+Places a new market order
 
 #### Parameters
 
@@ -283,9 +355,13 @@ Places a new market order.
 
 [`MarketOrderRequest`](../interfaces/MarketOrderRequest.md)
 
+The market order request details
+
 #### Returns
 
 `Promise`\<[`Order`](../interfaces/Order.md)\>
+
+A promise that resolves with the details of the placed order
 
 ***
 
@@ -293,9 +369,9 @@ Places a new market order.
 
 > **placeStopLimitOrder**(`order`): `Promise`\<[`Order`](../interfaces/Order.md)\>
 
-Defined in: [services/trading212-client.ts:212](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L212)
+Defined in: [services/trading212-client.ts:296](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L296)
 
-Places a new stop-limit order.
+Places a new stop-limit order
 
 #### Parameters
 
@@ -303,9 +379,13 @@ Places a new stop-limit order.
 
 [`StopLimitOrderRequest`](../interfaces/StopLimitOrderRequest.md)
 
+The stop-limit order request details
+
 #### Returns
 
 `Promise`\<[`Order`](../interfaces/Order.md)\>
+
+A promise that resolves with the details of the placed order
 
 ***
 
@@ -313,9 +393,9 @@ Places a new stop-limit order.
 
 > **placeStopOrder**(`order`): `Promise`\<[`Order`](../interfaces/Order.md)\>
 
-Defined in: [services/trading212-client.ts:205](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L205)
+Defined in: [services/trading212-client.ts:287](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L287)
 
-Places a new stop order.
+Places a new stop order
 
 #### Parameters
 
@@ -323,9 +403,13 @@ Places a new stop order.
 
 [`StopOrderRequest`](../interfaces/StopOrderRequest.md)
 
+The stop order request details
+
 #### Returns
 
 `Promise`\<[`Order`](../interfaces/Order.md)\>
+
+A promise that resolves with the details of the placed order
 
 ***
 
@@ -333,9 +417,9 @@ Places a new stop order.
 
 > **requestReport**(`report`): `Promise`\<[`RequestReportResponse`](../interfaces/RequestReportResponse.md)\>
 
-Defined in: [services/trading212-client.ts:172](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/services/trading212-client.ts#L172)
+Defined in: [services/trading212-client.ts:246](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/services/trading212-client.ts#L246)
 
-Requests the generation of a new account report.
+Requests the generation of a new account report
 
 #### Parameters
 
@@ -343,6 +427,10 @@ Requests the generation of a new account report.
 
 [`ReportRequest`](../interfaces/ReportRequest.md)
 
+The report request details
+
 #### Returns
 
 `Promise`\<[`RequestReportResponse`](../interfaces/RequestReportResponse.md)\>
+
+A promise that resolves with the report request response

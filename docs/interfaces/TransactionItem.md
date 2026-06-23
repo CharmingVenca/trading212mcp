@@ -6,9 +6,9 @@
 
 # Interface: TransactionItem
 
-Defined in: [types/account.ts:82](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L82)
+Defined in: [types/account.ts:108](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L108)
 
-Deposit, withdrawal, or fee transaction.
+Deposit, withdrawal, or fee transaction
 
 ## Properties
 
@@ -16,7 +16,9 @@ Deposit, withdrawal, or fee transaction.
 
 > **amount**: `number`
 
-Defined in: [types/account.ts:83](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L83)
+Defined in: [types/account.ts:109](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L109)
+
+amount of the transaction
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/account.ts:83](https://github.com/CharmingVenca/trading212mcp
 
 > **currency**: `string`
 
-Defined in: [types/account.ts:84](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L84)
+Defined in: [types/account.ts:110](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L110)
+
+currency of the transaction
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/account.ts:84](https://github.com/CharmingVenca/trading212mcp
 
 > **dateTime**: `string`
 
-Defined in: [types/account.ts:85](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L85)
+Defined in: [types/account.ts:111](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L111)
+
+date and time of the transaction
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/account.ts:85](https://github.com/CharmingVenca/trading212mcp
 
 > **reference**: `string`
 
-Defined in: [types/account.ts:86](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L86)
+Defined in: [types/account.ts:112](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L112)
+
+A reference string for the transaction
 
 ***
 
@@ -48,4 +56,6 @@ Defined in: [types/account.ts:86](https://github.com/CharmingVenca/trading212mcp
 
 > **type**: `"WITHDRAW"` \| `"DEPOSIT"` \| `"FEE"` \| `"TRANSFER"`
 
-Defined in: [types/account.ts:87](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L87)
+Defined in: [types/account.ts:113](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L113)
+
+type of the transaction

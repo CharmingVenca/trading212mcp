@@ -6,9 +6,9 @@
 
 # Interface: PaginatedResponse\<T\>
 
-Defined in: [types/common.ts:41](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L41)
+Defined in: [types/common.ts:47](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L47)
 
-Generic paginated API response.
+Generic paginated API response
 
 ## Type Parameters
 
@@ -22,7 +22,9 @@ Generic paginated API response.
 
 > **items**: `T`[]
 
-Defined in: [types/common.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L42)
+Defined in: [types/common.ts:48](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L48)
+
+an array of items for the current page
 
 ***
 
@@ -30,4 +32,6 @@ Defined in: [types/common.ts:42](https://github.com/CharmingVenca/trading212mcp/
 
 > **nextPagePath**: `string` \| `null`
 
-Defined in: [types/common.ts:43](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L43)
+Defined in: [types/common.ts:49](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L49)
+
+the path to the next page of results, or null if there are no more pages

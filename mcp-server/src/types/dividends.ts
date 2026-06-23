@@ -1,5 +1,5 @@
 /**
- * Detailed classification of dividend payment types.
+ * Detailed classification of dividend payment types
  */
 export type DividendType =
     | "ORDINARY" | "BONUS" | "PROPERTY_INCOME" | "RETURN_OF_CAPITAL_NON_US"

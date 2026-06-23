@@ -8,6 +8,6 @@
 
 > **FillType** = `"TRADE"` \| `"STOCK_SPLIT"` \| `"STOCK_DISTRIBUTION"` \| `"FOP"` \| `"FOP_CORRECTION"` \| `"CUSTOM_STOCK_DISTRIBUTION"` \| `"EQUITY_RIGHTS"` \| `"SCRIP_STOCK_DIVIDENDS"` \| `"STOCK_DIVIDENDS"` \| `"STOCK_ACQUISITION"` \| `"CASH_AND_STOCK_ACQUISITION"` \| `"SPIN_OFF"`
 
-Defined in: [types/account.ts:21](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L21)
+Defined in: [types/account.ts:21](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L21)
 
-Types of order fills.
+Types of order fills

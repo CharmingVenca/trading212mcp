@@ -1,12 +1,12 @@
 import { InstrumentInfo, Side, TimeInForce, InitiatedFrom, Strategy } from "./common.js";
 
 /**
- * Supported order execution types.
+ * Supported order execution types
  */
 export type OrderType = "LIMIT" | "STOP" | "MARKET" | "STOP_LIMIT";
 
 /**
- * Current state of an order in the lifecycle.
+ * Current state of an order in the lifecycle
  */
 export type OrderStatus =
     | "LOCAL"
@@ -22,7 +22,25 @@ export type OrderStatus =
     | "REPLACED";
 
 /**
- * Full details of an order.
+ * Full details of an order
+ * @property createdAt - timestamp when the order was created
+ * @property currency - currency of the order
+ * @property extendedHours - Indicates if the order was placed for extended hours trading
+ * @property filledQuantity - quantity of the order that has been filled
+ * @property filledValue - total value of the filled portion of the order
+ * @property id - unique identifier of the order
+ * @property initiatedFrom - source from which the order was initiated
+ * @property instrument - information about the instrument of the order
+ * @property limitPrice - limit price for limit and stop-limit orders
+ * @property quantity - total quantity of the order
+ * @property side - trade direction
+ * @property status - current status of the order
+ * @property stopPrice - stop price for stop and stop-limit orders
+ * @property strategy - trading strategy used
+ * @property ticker - ticker symbol of the instrument
+ * @property timeInForce - time in force policy for the order
+ * @property type - type of the order
+ * @property value - total value of the order
  */
 export interface Order {
     createdAt: string;
@@ -46,7 +64,11 @@ export interface Order {
 }
 
 /**
- * Request body for placing a limit order.
+ * Request body for placing a limit order
+ * @property limitPrice - price at which the order should be executed or better
+ * @property quantity - number of shares or units to buy/sell
+ * @property ticker - ticker symbol of the instrument
+ * @property timeValidity - time in force policy for the order
  */
 export interface LimitOrderRequest {
     limitPrice: number;
@@ -56,7 +78,10 @@ export interface LimitOrderRequest {
 }
 
 /**
- * Request body for placing a market order.
+ * Request body for placing a market order
+ * @property extendedHours - Boolean indicating whether the order can execute during extended hours
+ * @property quantity - number of shares or units to buy/sell
+ * @property ticker - ticker symbol of the instrument
  */
 export interface MarketOrderRequest {
     extendedHours: boolean;
@@ -65,7 +90,11 @@ export interface MarketOrderRequest {
 }
 
 /**
- * Request body for placing a stop order.
+ * Request body for placing a stop order
+ * @property quantity - number of shares or units to buy/sell
+ * @property stopPrice - price at which the stop order becomes a market order
+ * @property ticker - ticker symbol of the instrument
+ * @property timeValidity - time in force policy for the order
  */
 export interface StopOrderRequest {
     quantity: number;
@@ -75,7 +104,12 @@ export interface StopOrderRequest {
 }
 
 /**
- * Request body for placing a stop-limit order.
+ * Request body for placing a stop-limit order
+ * @property limitPrice - limit price for the order once the stop price is triggered
+ * @property quantity - number of shares or units to buy/sell
+ * @property stopPrice - price at which the stop-limit order is activated
+ * @property ticker - ticker symbol of the instrument
+ * @property timeValidity - time in force policy for the order
  */
 export interface StopLimitOrderRequest {
     limitPrice: number;
@@ -85,4 +119,7 @@ export interface StopLimitOrderRequest {
     timeValidity: TimeInForce;
 }
 
+/**
+ * Represents an array of pending orders
+ */
 export type PendingOrders = Order[];

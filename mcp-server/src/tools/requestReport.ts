@@ -3,7 +3,9 @@ import {Trading212Client} from "../services/trading212-client.js";
 import {z} from "zod";
 
 /**
- * Registers the requestReport tool with the MCP server.
+ * Registers the 'request_report' tool with the MCP server
+ * @param server McpServer instance to register the tool with
+ * @param client Trading212Client instance used to interact with the API
  */
 export function registerRequestReport(server: McpServer, client: Trading212Client) {
     server.registerTool(

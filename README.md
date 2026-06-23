@@ -63,6 +63,10 @@ await mcpServer.startStdio();
 await mcpServer.startHttp(3000);
 ```
 
+## Documentation
+
+For detailed API documentation, including all available resources, tools, and type definitions, please refer to the [Detailed API Documentation](docs/README.md).
+
 ## License
 
 ISC

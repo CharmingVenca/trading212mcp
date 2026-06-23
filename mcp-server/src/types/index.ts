@@ -1,5 +1,5 @@
 /**
- * Central export point for all API and domain types.
+ * Central export point for all API and domain types
  */
 export * from "./common.js";
 export * from "./metadata.js";

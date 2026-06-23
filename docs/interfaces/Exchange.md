@@ -6,9 +6,9 @@
 
 # Interface: Exchange
 
-Defined in: [types/metadata.ts:64](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L64)
+Defined in: [types/metadata.ts:81](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L81)
 
-Exchange metadata and operating schedule.
+Exchange metadata and operating schedule
 
 ## Properties
 
@@ -16,7 +16,9 @@ Exchange metadata and operating schedule.
 
 > **id**: `number`
 
-Defined in: [types/metadata.ts:65](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L65)
+Defined in: [types/metadata.ts:82](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L82)
+
+unique identifier of the exchange
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/metadata.ts:65](https://github.com/CharmingVenca/trading212mc
 
 > **name**: `string`
 
-Defined in: [types/metadata.ts:66](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L66)
+Defined in: [types/metadata.ts:83](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L83)
+
+name of the exchange
 
 ***
 
@@ -32,4 +36,6 @@ Defined in: [types/metadata.ts:66](https://github.com/CharmingVenca/trading212mc
 
 > **workingSchedules**: [`WorkingSchedule`](WorkingSchedule.md)[]
 
-Defined in: [types/metadata.ts:67](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L67)
+Defined in: [types/metadata.ts:84](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L84)
+
+an array of working schedules for the exchange

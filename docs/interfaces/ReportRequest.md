@@ -6,9 +6,9 @@
 
 # Interface: ReportRequest
 
-Defined in: [types/reports.ts:19](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L19)
+Defined in: [types/reports.ts:26](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L26)
 
-Parameters for requesting a new report.
+Parameters for requesting a new report
 
 ## Properties
 
@@ -16,7 +16,9 @@ Parameters for requesting a new report.
 
 > **dataIncluded**: [`ReportDataIncluded`](ReportDataIncluded.md)
 
-Defined in: [types/reports.ts:20](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L20)
+Defined in: [types/reports.ts:27](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L27)
+
+Specifies which data categories to include in the report
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/reports.ts:20](https://github.com/CharmingVenca/trading212mcp
 
 > **timeFrom**: `string`
 
-Defined in: [types/reports.ts:21](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L21)
+Defined in: [types/reports.ts:28](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L28)
+
+start time for the report data in ISO 8601 format
 
 ***
 
@@ -32,4 +36,6 @@ Defined in: [types/reports.ts:21](https://github.com/CharmingVenca/trading212mcp
 
 > **timeTo**: `string`
 
-Defined in: [types/reports.ts:22](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L22)
+Defined in: [types/reports.ts:29](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L29)
+
+end time for the report data in ISO 8601 format

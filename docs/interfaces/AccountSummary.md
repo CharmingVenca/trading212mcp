@@ -6,9 +6,9 @@
 
 # Interface: AccountSummary
 
-Defined in: [types/account.ts:130](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L130)
+Defined in: [types/account.ts:180](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L180)
 
-Overall account financial summary.
+Overall account financial summary
 
 ## Properties
 
@@ -16,7 +16,9 @@ Overall account financial summary.
 
 > **cash**: `object`
 
-Defined in: [types/account.ts:131](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L131)
+Defined in: [types/account.ts:181](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L181)
+
+Details about the cash in the account
 
 #### availableToTrade
 
@@ -36,7 +38,9 @@ Defined in: [types/account.ts:131](https://github.com/CharmingVenca/trading212mc
 
 > **currency**: `string`
 
-Defined in: [types/account.ts:136](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L136)
+Defined in: [types/account.ts:186](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L186)
+
+currency of the account
 
 ***
 
@@ -44,7 +48,9 @@ Defined in: [types/account.ts:136](https://github.com/CharmingVenca/trading212mc
 
 > **id**: `number`
 
-Defined in: [types/account.ts:137](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L137)
+Defined in: [types/account.ts:187](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L187)
+
+unique identifier of the account
 
 ***
 
@@ -52,7 +58,9 @@ Defined in: [types/account.ts:137](https://github.com/CharmingVenca/trading212mc
 
 > **investments**: `object`
 
-Defined in: [types/account.ts:138](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L138)
+Defined in: [types/account.ts:188](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L188)
+
+Details about the investments in the account
 
 #### currentValue
 
@@ -76,4 +84,6 @@ Defined in: [types/account.ts:138](https://github.com/CharmingVenca/trading212mc
 
 > **totalValue**: `number`
 
-Defined in: [types/account.ts:144](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L144)
+Defined in: [types/account.ts:194](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L194)
+
+total value of the account

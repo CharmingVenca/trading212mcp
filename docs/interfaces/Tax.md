@@ -6,9 +6,9 @@
 
 # Interface: Tax
 
-Defined in: [types/account.ts:40](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L40)
+Defined in: [types/account.ts:47](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L47)
 
-Tax information for a transaction.
+Tax information for a transaction
 
 ## Properties
 
@@ -16,7 +16,9 @@ Tax information for a transaction.
 
 > **chargedAt**: `string`
 
-Defined in: [types/account.ts:41](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L41)
+Defined in: [types/account.ts:48](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L48)
+
+timestamp when the tax was charged
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/account.ts:41](https://github.com/CharmingVenca/trading212mcp
 
 > **currency**: `string`
 
-Defined in: [types/account.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L42)
+Defined in: [types/account.ts:49](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L49)
+
+currency of the tax
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/account.ts:42](https://github.com/CharmingVenca/trading212mcp
 
 > **name**: [`TaxName`](../type-aliases/TaxName.md)
 
-Defined in: [types/account.ts:43](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L43)
+Defined in: [types/account.ts:50](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L50)
+
+name or type of the tax
 
 ***
 
@@ -40,4 +46,6 @@ Defined in: [types/account.ts:43](https://github.com/CharmingVenca/trading212mcp
 
 > **quantity**: `number`
 
-Defined in: [types/account.ts:44](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L44)
+Defined in: [types/account.ts:51](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L51)
+
+quantity related to the tax

@@ -5,7 +5,9 @@ import pkg from '../package.json' with { type: 'json' };
 
 
 /**
- * Main entry point to start the MCP server over stdio and HTTP.
+ * Main entry point to start the MCP server over stdio and HTTP
+ * Parses command-line arguments and environment variables for API keys, base URL, and debug settings
+ * initializes and starts the Trading212Client and Trading212McpServer
  */
 async function main() {
     const apiKeyArg = process.argv.find(arg => arg.startsWith('--t212-api-key='));
@@ -54,7 +56,10 @@ async function main() {
     await mcpServer.startHttp(port);
     console.error('\[mcp\] HTTP listening on http://127.0.0.1:' + port + '/mcp');
 
-    // Graceful Shutdown
+    /**
+     * Handles the shutdown of the MCP server
+     * @param signal The signal received (e.g., 'SIGINT', 'SIGTERM')
+     */
     const shutdown = async (signal: string) => {
         console.error(`[mcp] Received ${signal}. Starting shutdown...`);
         await mcpServer.stop();

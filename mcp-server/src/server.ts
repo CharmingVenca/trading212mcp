@@ -21,13 +21,16 @@ import { registerGetPendingOrderById } from "./resources/getPendingOrderById.js"
 import { registerFetchAllOpenPositions } from "./resources/fetchAllOpenPositions.js";
 
 export interface Trading212McpServerOptions {
+    /** The name of the server. Defaults to package.json name if not provided */
     name?: string;
+    /** The version of the server. Defaults to package.json version if not provided */
     version?: string;
+    /** The Trading212Client instance to use for API interactions */
     client: Trading212Client;
 }
 
 /**
- * Encapsulates the Trading212 MCP server logic for both CLI and library use.
+ * Encapsulates the Trading212 MCP server logic
  */
 export class Trading212McpServer {
     private readonly server: McpServer;
@@ -40,6 +43,10 @@ export class Trading212McpServer {
         transport: NodeStreamableHTTPServerTransport;
     }>();
 
+    /**
+     * Initializes a new instance of the Trading212McpServer
+     * @param options Configuration options for the server, including the Trading212Client instance
+     */
     constructor(options: Trading212McpServerOptions) {
         this.client = options.client;
         this.name = options.name ?? pkg.name;
@@ -47,6 +54,12 @@ export class Trading212McpServer {
         this.server = this.createMcpInstance(this.name, this.version);
     }
 
+    /**
+     * Creates and configures a new McpServer instance, registering all the Trading212 resources and tools
+     * @param name Name of the MCP server
+     * @param version Version of the MCP server
+     * @returns A configured McpServer instance
+     */
     private createMcpInstance(name: string, version: string): McpServer {
         const server = new McpServer({ name, version });
         
@@ -72,7 +85,9 @@ export class Trading212McpServer {
     }
 
     /**
-     * Starts the server using stdio transport.
+     * Starts the server using stdio transport
+     * Establishes a connection to the MCP server with I/O streams
+     * @returns A promise that resolves with the StdioServerTransport instance
      */
     async startStdio() {
         const transport = new StdioServerTransport();
@@ -81,9 +96,11 @@ export class Trading212McpServer {
     }
 
     /**
-     * Starts the server using HTTP transport.
-     * @param port The port to listen on.
-     * @param host The host to bind to.
+     * Starts the server using HTTP transport
+     * Binds the server to a specified port and host, handling incoming HTTP requests
+     * @param port Port to listen on, defaults to 3000
+     * @param host Host to bind to, defaults to 127.0.0.1
+     * @returns A promise that resolves when the HTTP server is listening
      */
     async startHttp(port: number = 3000, host: string = "127.0.0.1") {
         this.httpServer = createServer(async (req, res) => {
@@ -156,7 +173,8 @@ export class Trading212McpServer {
     }
 
     /**
-     * Shuts down the server and all active sessions.
+     * Shuts down the server and all active sessions
+     * @returns A promise that resolves when all shutdown operations are complete
      */
     async stop() {
         const closePromises: Promise<any>[] = [];

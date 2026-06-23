@@ -6,9 +6,9 @@
 
 # Class: Trading212McpServer
 
-Defined in: [server.ts:31](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/server.ts#L31)
+Defined in: [server.ts:35](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/server.ts#L35)
 
-Encapsulates the Trading212 MCP server logic for both CLI and library use.
+Encapsulates the Trading212 MCP server logic
 
 ## Constructors
 
@@ -16,13 +16,17 @@ Encapsulates the Trading212 MCP server logic for both CLI and library use.
 
 > **new Trading212McpServer**(`options`): `Trading212McpServer`
 
-Defined in: [server.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/server.ts#L42)
+Defined in: [server.ts:50](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/server.ts#L50)
+
+Initializes a new instance of the Trading212McpServer
 
 #### Parameters
 
 ##### options
 
 [`Trading212McpServerOptions`](../interfaces/Trading212McpServerOptions.md)
+
+Configuration options for the server, including the Trading212Client instance
 
 #### Returns
 
@@ -34,9 +38,10 @@ Defined in: [server.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/3
 
 > **startHttp**(`port?`, `host?`): `Promise`\<`void`\>
 
-Defined in: [server.ts:87](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/server.ts#L87)
+Defined in: [server.ts:105](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/server.ts#L105)
 
-Starts the server using HTTP transport.
+Starts the server using HTTP transport
+Binds the server to a specified port and host, handling incoming HTTP requests
 
 #### Parameters
 
@@ -44,17 +49,19 @@ Starts the server using HTTP transport.
 
 `number` = `3000`
 
-The port to listen on.
+Port to listen on, defaults to 3000
 
 ##### host?
 
 `string` = `"127.0.0.1"`
 
-The host to bind to.
+Host to bind to, defaults to 127.0.0.1
 
 #### Returns
 
 `Promise`\<`void`\>
+
+A promise that resolves when the HTTP server is listening
 
 ***
 
@@ -62,13 +69,16 @@ The host to bind to.
 
 > **startStdio**(): `Promise`\<`StdioServerTransport`\>
 
-Defined in: [server.ts:76](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/server.ts#L76)
+Defined in: [server.ts:92](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/server.ts#L92)
 
-Starts the server using stdio transport.
+Starts the server using stdio transport
+Establishes a connection to the MCP server with I/O streams
 
 #### Returns
 
 `Promise`\<`StdioServerTransport`\>
+
+A promise that resolves with the StdioServerTransport instance
 
 ***
 
@@ -76,10 +86,12 @@ Starts the server using stdio transport.
 
 > **stop**(): `Promise`\<`void`\>
 
-Defined in: [server.ts:160](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/server.ts#L160)
+Defined in: [server.ts:179](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/server.ts#L179)
 
-Shuts down the server and all active sessions.
+Shuts down the server and all active sessions
 
 #### Returns
 
 `Promise`\<`void`\>
+
+A promise that resolves when all shutdown operations are complete

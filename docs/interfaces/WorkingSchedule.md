@@ -6,9 +6,9 @@
 
 # Interface: WorkingSchedule
 
-Defined in: [types/metadata.ts:56](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L56)
+Defined in: [types/metadata.ts:70](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L70)
 
-Market schedule for a specific day/period.
+Market schedule for a specific day/period
 
 ## Properties
 
@@ -16,7 +16,9 @@ Market schedule for a specific day/period.
 
 > **id**: `number`
 
-Defined in: [types/metadata.ts:57](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L57)
+Defined in: [types/metadata.ts:71](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L71)
+
+Unique identifier of the working schedule
 
 ***
 
@@ -24,4 +26,6 @@ Defined in: [types/metadata.ts:57](https://github.com/CharmingVenca/trading212mc
 
 > **timeEvents**: [`TimeEvent`](TimeEvent.md)[]
 
-Defined in: [types/metadata.ts:58](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L58)
+Defined in: [types/metadata.ts:72](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L72)
+
+An array of time events defining the schedule

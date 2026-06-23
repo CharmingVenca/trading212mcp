@@ -3,7 +3,9 @@ import {Trading212Client} from "../services/trading212-client";
 import {z} from "zod";
 
 /**
- * Registers the placeLimitOrder tool with the MCP server.
+ * Registers the 'place_limit_order' tool with the MCP server
+ * @param server McpServer instance to register the tool with
+ * @param client Trading212Client instance used to interact with the API
  */
 export function registerPlaceLimitOrder(server: McpServer, client: Trading212Client) {
     server.registerTool(

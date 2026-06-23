@@ -6,9 +6,9 @@
 
 # Interface: InstrumentInfo
 
-Defined in: [types/common.ts:31](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L31)
+Defined in: [types/common.ts:35](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L35)
 
-Basic instrument identification.
+Basic instrument identification
 
 ## Properties
 
@@ -16,7 +16,9 @@ Basic instrument identification.
 
 > **currency**: `string`
 
-Defined in: [types/common.ts:32](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L32)
+Defined in: [types/common.ts:36](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L36)
+
+trading currency of the instrument
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/common.ts:32](https://github.com/CharmingVenca/trading212mcp/
 
 > **isin**: `string`
 
-Defined in: [types/common.ts:33](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L33)
+Defined in: [types/common.ts:37](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L37)
+
+International Securities Identification Number of the instrument
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/common.ts:33](https://github.com/CharmingVenca/trading212mcp/
 
 > **name**: `string`
 
-Defined in: [types/common.ts:34](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L34)
+Defined in: [types/common.ts:38](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L38)
+
+name of the instrument
 
 ***
 
@@ -40,4 +46,6 @@ Defined in: [types/common.ts:34](https://github.com/CharmingVenca/trading212mcp/
 
 > **ticker**: `string`
 
-Defined in: [types/common.ts:35](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/common.ts#L35)
+Defined in: [types/common.ts:39](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/common.ts#L39)
+
+ticker symbol of the instrument

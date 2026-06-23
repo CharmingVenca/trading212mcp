@@ -6,9 +6,9 @@
 
 # Interface: Order
 
-Defined in: [types/orders.ts:27](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L27)
+Defined in: [types/orders.ts:45](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L45)
 
-Full details of an order.
+Full details of an order
 
 ## Properties
 
@@ -16,7 +16,9 @@ Full details of an order.
 
 > **createdAt**: `string`
 
-Defined in: [types/orders.ts:28](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L28)
+Defined in: [types/orders.ts:46](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L46)
+
+timestamp when the order was created
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/orders.ts:28](https://github.com/CharmingVenca/trading212mcp/
 
 > **currency**: `string`
 
-Defined in: [types/orders.ts:29](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L29)
+Defined in: [types/orders.ts:47](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L47)
+
+currency of the order
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/orders.ts:29](https://github.com/CharmingVenca/trading212mcp/
 
 > **extendedHours**: `boolean`
 
-Defined in: [types/orders.ts:30](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L30)
+Defined in: [types/orders.ts:48](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L48)
+
+Indicates if the order was placed for extended hours trading
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/orders.ts:30](https://github.com/CharmingVenca/trading212mcp/
 
 > **filledQuantity**: `number`
 
-Defined in: [types/orders.ts:31](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L31)
+Defined in: [types/orders.ts:49](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L49)
+
+quantity of the order that has been filled
 
 ***
 
@@ -48,7 +56,9 @@ Defined in: [types/orders.ts:31](https://github.com/CharmingVenca/trading212mcp/
 
 > **filledValue**: `number`
 
-Defined in: [types/orders.ts:32](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L32)
+Defined in: [types/orders.ts:50](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L50)
+
+total value of the filled portion of the order
 
 ***
 
@@ -56,7 +66,9 @@ Defined in: [types/orders.ts:32](https://github.com/CharmingVenca/trading212mcp/
 
 > **id**: `number`
 
-Defined in: [types/orders.ts:33](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L33)
+Defined in: [types/orders.ts:51](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L51)
+
+unique identifier of the order
 
 ***
 
@@ -64,7 +76,9 @@ Defined in: [types/orders.ts:33](https://github.com/CharmingVenca/trading212mcp/
 
 > **initiatedFrom**: [`InitiatedFrom`](../type-aliases/InitiatedFrom.md)
 
-Defined in: [types/orders.ts:34](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L34)
+Defined in: [types/orders.ts:52](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L52)
+
+source from which the order was initiated
 
 ***
 
@@ -72,7 +86,9 @@ Defined in: [types/orders.ts:34](https://github.com/CharmingVenca/trading212mcp/
 
 > **instrument**: [`InstrumentInfo`](InstrumentInfo.md)
 
-Defined in: [types/orders.ts:35](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L35)
+Defined in: [types/orders.ts:53](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L53)
+
+information about the instrument of the order
 
 ***
 
@@ -80,7 +96,9 @@ Defined in: [types/orders.ts:35](https://github.com/CharmingVenca/trading212mcp/
 
 > **limitPrice**: `number`
 
-Defined in: [types/orders.ts:36](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L36)
+Defined in: [types/orders.ts:54](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L54)
+
+limit price for limit and stop-limit orders
 
 ***
 
@@ -88,7 +106,9 @@ Defined in: [types/orders.ts:36](https://github.com/CharmingVenca/trading212mcp/
 
 > **quantity**: `number`
 
-Defined in: [types/orders.ts:37](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L37)
+Defined in: [types/orders.ts:55](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L55)
+
+total quantity of the order
 
 ***
 
@@ -96,7 +116,9 @@ Defined in: [types/orders.ts:37](https://github.com/CharmingVenca/trading212mcp/
 
 > **side**: [`Side`](../type-aliases/Side.md)
 
-Defined in: [types/orders.ts:38](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L38)
+Defined in: [types/orders.ts:56](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L56)
+
+trade direction
 
 ***
 
@@ -104,7 +126,9 @@ Defined in: [types/orders.ts:38](https://github.com/CharmingVenca/trading212mcp/
 
 > **status**: [`OrderStatus`](../type-aliases/OrderStatus.md)
 
-Defined in: [types/orders.ts:39](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L39)
+Defined in: [types/orders.ts:57](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L57)
+
+current status of the order
 
 ***
 
@@ -112,7 +136,9 @@ Defined in: [types/orders.ts:39](https://github.com/CharmingVenca/trading212mcp/
 
 > **stopPrice**: `number`
 
-Defined in: [types/orders.ts:40](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L40)
+Defined in: [types/orders.ts:58](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L58)
+
+stop price for stop and stop-limit orders
 
 ***
 
@@ -120,7 +146,9 @@ Defined in: [types/orders.ts:40](https://github.com/CharmingVenca/trading212mcp/
 
 > **strategy**: [`Strategy`](../type-aliases/Strategy.md)
 
-Defined in: [types/orders.ts:41](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L41)
+Defined in: [types/orders.ts:59](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L59)
+
+trading strategy used
 
 ***
 
@@ -128,7 +156,9 @@ Defined in: [types/orders.ts:41](https://github.com/CharmingVenca/trading212mcp/
 
 > **ticker**: `string`
 
-Defined in: [types/orders.ts:42](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L42)
+Defined in: [types/orders.ts:60](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L60)
+
+ticker symbol of the instrument
 
 ***
 
@@ -136,7 +166,9 @@ Defined in: [types/orders.ts:42](https://github.com/CharmingVenca/trading212mcp/
 
 > **timeInForce**: [`TimeInForce`](../type-aliases/TimeInForce.md)
 
-Defined in: [types/orders.ts:43](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L43)
+Defined in: [types/orders.ts:61](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L61)
+
+time in force policy for the order
 
 ***
 
@@ -144,7 +176,9 @@ Defined in: [types/orders.ts:43](https://github.com/CharmingVenca/trading212mcp/
 
 > **type**: [`OrderType`](../type-aliases/OrderType.md)
 
-Defined in: [types/orders.ts:44](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L44)
+Defined in: [types/orders.ts:62](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L62)
+
+type of the order
 
 ***
 
@@ -152,4 +186,6 @@ Defined in: [types/orders.ts:44](https://github.com/CharmingVenca/trading212mcp/
 
 > **value**: `number`
 
-Defined in: [types/orders.ts:45](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/orders.ts#L45)
+Defined in: [types/orders.ts:63](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/orders.ts#L63)
+
+total value of the order

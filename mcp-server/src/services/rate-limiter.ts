@@ -1,11 +1,22 @@
+/**
+ * Manages API request rate limiting based on HTTP response headers
+ */
 export class RateLimiter {
     private limit: number = Infinity;
     private remaining: number = Infinity;
     private reset: number = 0;
     private period: number = 60;
 
+    /**
+     * @param disabled Optional, if true -> disables rate limiting. Defaults to false.
+     * @param debug Optional, if true -> enables debug logging. Defaults to false.
+     */
     constructor(private disabled: boolean = false, private debug: boolean = false) {}
 
+    /**
+     * Updates the rate limit parameters (limit, remaining, reset, period) based on the provided HTTP response headers.
+     * @param headers HTTP response headers
+     */
     updateLimits(headers: Headers) {
         if (this.disabled) {
             return;
@@ -25,6 +36,10 @@ export class RateLimiter {
         }
     }
 
+    /**
+     * Pauses execution if the rate limit has been reached until the reset time.
+     * @returns A promise that resolves when permission is granted
+     */
     async awaitPermission(): Promise<void> {
         if (this.disabled) {
             return;

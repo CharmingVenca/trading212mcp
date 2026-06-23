@@ -22,7 +22,7 @@
     "docs": "typedoc --plugin typedoc-plugin-markdown --out ../docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Václav Klimeš",
   "license": "ISC",
   "type": "module",
   "dependencies": {

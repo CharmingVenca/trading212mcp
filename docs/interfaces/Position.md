@@ -6,9 +6,9 @@
 
 # Interface: Position
 
-Defined in: [types/account.ts:110](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L110)
+Defined in: [types/account.ts:155](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L155)
 
-Open investment position details.
+Open investment position details
 
 ## Properties
 
@@ -16,7 +16,9 @@ Open investment position details.
 
 > **averagePricePaid**: `number`
 
-Defined in: [types/account.ts:111](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L111)
+Defined in: [types/account.ts:156](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L156)
+
+average price paid for the position
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/account.ts:111](https://github.com/CharmingVenca/trading212mc
 
 > **createdAt**: `string`
 
-Defined in: [types/account.ts:112](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L112)
+Defined in: [types/account.ts:157](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L157)
+
+timestamp when the position was created
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/account.ts:112](https://github.com/CharmingVenca/trading212mc
 
 > **currentPrice**: `number`
 
-Defined in: [types/account.ts:113](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L113)
+Defined in: [types/account.ts:158](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L158)
+
+current price of the instrument
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/account.ts:113](https://github.com/CharmingVenca/trading212mc
 
 > **instrument**: [`InstrumentInfo`](InstrumentInfo.md)
 
-Defined in: [types/account.ts:114](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L114)
+Defined in: [types/account.ts:159](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L159)
+
+Information about the instrument in the position
 
 ***
 
@@ -48,7 +56,9 @@ Defined in: [types/account.ts:114](https://github.com/CharmingVenca/trading212mc
 
 > **quantity**: `number`
 
-Defined in: [types/account.ts:115](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L115)
+Defined in: [types/account.ts:160](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L160)
+
+total quantity of the instrument held
 
 ***
 
@@ -56,7 +66,9 @@ Defined in: [types/account.ts:115](https://github.com/CharmingVenca/trading212mc
 
 > **quantityAvailableForTrading**: `number`
 
-Defined in: [types/account.ts:116](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L116)
+Defined in: [types/account.ts:161](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L161)
+
+quantity of the instrument available for further trading
 
 ***
 
@@ -64,7 +76,9 @@ Defined in: [types/account.ts:116](https://github.com/CharmingVenca/trading212mc
 
 > **quantityInPies**: `number`
 
-Defined in: [types/account.ts:117](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L117)
+Defined in: [types/account.ts:162](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L162)
+
+quantity of the instrument held in pies
 
 ***
 
@@ -72,7 +86,9 @@ Defined in: [types/account.ts:117](https://github.com/CharmingVenca/trading212mc
 
 > **walletImpact**: `object`
 
-Defined in: [types/account.ts:118](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L118)
+Defined in: [types/account.ts:163](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L163)
+
+financial impact of this position
 
 #### currency
 

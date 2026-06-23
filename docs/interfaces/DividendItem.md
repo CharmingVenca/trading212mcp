@@ -6,9 +6,9 @@
 
 # Interface: DividendItem
 
-Defined in: [types/account.ts:93](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L93)
+Defined in: [types/account.ts:130](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L130)
 
-Dividend payment details.
+Dividend payment details
 
 ## Properties
 
@@ -16,7 +16,9 @@ Dividend payment details.
 
 > **amount**: `number`
 
-Defined in: [types/account.ts:94](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L94)
+Defined in: [types/account.ts:131](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L131)
+
+net amount of the dividend
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/account.ts:94](https://github.com/CharmingVenca/trading212mcp
 
 > **amountInEuro**: `number`
 
-Defined in: [types/account.ts:95](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L95)
+Defined in: [types/account.ts:132](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L132)
+
+amount of the dividend in Euro
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/account.ts:95](https://github.com/CharmingVenca/trading212mcp
 
 > **currency**: `string`
 
-Defined in: [types/account.ts:96](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L96)
+Defined in: [types/account.ts:133](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L133)
+
+currency of the dividend
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/account.ts:96](https://github.com/CharmingVenca/trading212mcp
 
 > **grossAmountPerShare**: `number`
 
-Defined in: [types/account.ts:97](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L97)
+Defined in: [types/account.ts:134](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L134)
+
+gross amount per share
 
 ***
 
@@ -48,7 +56,9 @@ Defined in: [types/account.ts:97](https://github.com/CharmingVenca/trading212mcp
 
 > **instrument**: [`InstrumentInfo`](InstrumentInfo.md)
 
-Defined in: [types/account.ts:98](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L98)
+Defined in: [types/account.ts:135](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L135)
+
+Information about the instrument the dividend is from
 
 ***
 
@@ -56,7 +66,9 @@ Defined in: [types/account.ts:98](https://github.com/CharmingVenca/trading212mcp
 
 > **paidOn**: `string`
 
-Defined in: [types/account.ts:99](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L99)
+Defined in: [types/account.ts:136](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L136)
+
+date the dividend was paid
 
 ***
 
@@ -64,7 +76,9 @@ Defined in: [types/account.ts:99](https://github.com/CharmingVenca/trading212mcp
 
 > **quantity**: `number`
 
-Defined in: [types/account.ts:100](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L100)
+Defined in: [types/account.ts:137](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L137)
+
+quantity of shares that received the dividend
 
 ***
 
@@ -72,7 +86,9 @@ Defined in: [types/account.ts:100](https://github.com/CharmingVenca/trading212mc
 
 > **reference**: `string`
 
-Defined in: [types/account.ts:101](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L101)
+Defined in: [types/account.ts:138](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L138)
+
+a reference for the dividend payment
 
 ***
 
@@ -80,7 +96,9 @@ Defined in: [types/account.ts:101](https://github.com/CharmingVenca/trading212mc
 
 > **ticker**: `string`
 
-Defined in: [types/account.ts:102](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L102)
+Defined in: [types/account.ts:139](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L139)
+
+ticker symbol of the instrument
 
 ***
 
@@ -88,7 +106,9 @@ Defined in: [types/account.ts:102](https://github.com/CharmingVenca/trading212mc
 
 > **tickerCurrency**: `string`
 
-Defined in: [types/account.ts:103](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L103)
+Defined in: [types/account.ts:140](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L140)
+
+currency of the ticker
 
 ***
 
@@ -96,4 +116,6 @@ Defined in: [types/account.ts:103](https://github.com/CharmingVenca/trading212mc
 
 > **type**: [`DividendType`](../type-aliases/DividendType.md)
 
-Defined in: [types/account.ts:104](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L104)
+Defined in: [types/account.ts:141](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L141)
+
+type of dividend

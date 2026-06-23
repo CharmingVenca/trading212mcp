@@ -1,5 +1,5 @@
 /**
- * Asset class type.
+ * Asset class type
  */
 export type Type =
     | "CRYPTOCURRENCY"
@@ -14,7 +14,7 @@ export type Type =
     | "CORPACT";
 
 /**
- * Market session event types.
+ * Market session event types
  */
 export type TimeEventType =
     | "OPEN"
@@ -27,7 +27,17 @@ export type TimeEventType =
     | "OVERNIGHT_OPEN";
 
 /**
- * Detailed instrument metadata.
+ * Detailed instrument metadata
+ * @property addedOn - date the instrument was added
+ * @property currencyCode - currency code of the instrument
+ * @property extendedHours - Indicates if extended hours trading is available
+ * @property isin - ISIN of the instrument
+ * @property maxOpenQuantity - maximum quantity that can be open
+ * @property name - full name of the instrument
+ * @property shortName - short name of the instrument
+ * @property ticker - ticker symbol of the instrument
+ * @property type - asset class type of the instrument
+ * @property workingScheduleId - ID of the working schedule for the instrument
  */
 export interface Instrument {
     addedOn: string;
@@ -43,7 +53,9 @@ export interface Instrument {
 }
 
 /**
- * Specific market timing event.
+ * Specific market timing event
+ * @property date - date of the event
+ * @property type - type of the time event (e.g., OPEN, CLOSE, BREAK_START)
  */
 export interface TimeEvent {
     date: string;
@@ -51,7 +63,9 @@ export interface TimeEvent {
 }
 
 /**
- * Market schedule for a specific day/period.
+ * Market schedule for a specific day/period
+ * @property id - Unique identifier of the working schedule
+ * @property timeEvents - An array of time events defining the schedule
  */
 export interface WorkingSchedule {
     id: number;
@@ -59,7 +73,10 @@ export interface WorkingSchedule {
 }
 
 /**
- * Exchange metadata and operating schedule.
+ * Exchange metadata and operating schedule
+ * @property id - unique identifier of the exchange
+ * @property name - name of the exchange
+ * @property workingSchedules - an array of working schedules for the exchange
  */
 export interface Exchange {
     id: number;
@@ -67,5 +84,11 @@ export interface Exchange {
     workingSchedules: WorkingSchedule[];
 }
 
+/**
+ * Represents an array of detailed instrument metadata
+ */
 export type Instruments = Instrument[];
+/**
+ * Represents an array of exchange metadata and operating schedules
+ */
 export type Exchanges = Exchange[];

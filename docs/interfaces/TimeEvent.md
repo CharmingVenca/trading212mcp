@@ -6,9 +6,9 @@
 
 # Interface: TimeEvent
 
-Defined in: [types/metadata.ts:48](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L48)
+Defined in: [types/metadata.ts:60](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L60)
 
-Specific market timing event.
+Specific market timing event
 
 ## Properties
 
@@ -16,7 +16,9 @@ Specific market timing event.
 
 > **date**: `string`
 
-Defined in: [types/metadata.ts:49](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L49)
+Defined in: [types/metadata.ts:61](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L61)
+
+date of the event
 
 ***
 
@@ -24,4 +26,6 @@ Defined in: [types/metadata.ts:49](https://github.com/CharmingVenca/trading212mc
 
 > **type**: [`TimeEventType`](../type-aliases/TimeEventType.md)
 
-Defined in: [types/metadata.ts:50](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/metadata.ts#L50)
+Defined in: [types/metadata.ts:62](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/metadata.ts#L62)
+
+type of the time event (e.g., OPEN, CLOSE, BREAK_START)

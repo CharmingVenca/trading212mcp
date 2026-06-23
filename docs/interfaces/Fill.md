@@ -6,9 +6,9 @@
 
 # Interface: Fill
 
-Defined in: [types/account.ts:61](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L61)
+Defined in: [types/account.ts:80](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L80)
 
-Details of a filled order.
+Details of a filled order
 
 ## Properties
 
@@ -16,7 +16,9 @@ Details of a filled order.
 
 > **filledAt**: `string`
 
-Defined in: [types/account.ts:62](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L62)
+Defined in: [types/account.ts:81](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L81)
+
+timestamp when the order was filled
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/account.ts:62](https://github.com/CharmingVenca/trading212mcp
 
 > **id**: `number`
 
-Defined in: [types/account.ts:63](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L63)
+Defined in: [types/account.ts:82](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L82)
+
+unique identifier of the fill
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/account.ts:63](https://github.com/CharmingVenca/trading212mcp
 
 > **price**: `number`
 
-Defined in: [types/account.ts:64](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L64)
+Defined in: [types/account.ts:83](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L83)
+
+price at which the order was filled
 
 ***
 
@@ -40,7 +46,9 @@ Defined in: [types/account.ts:64](https://github.com/CharmingVenca/trading212mcp
 
 > **quantity**: `number`
 
-Defined in: [types/account.ts:65](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L65)
+Defined in: [types/account.ts:84](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L84)
+
+quantity filled
 
 ***
 
@@ -48,7 +56,9 @@ Defined in: [types/account.ts:65](https://github.com/CharmingVenca/trading212mcp
 
 > **tradingMethod**: [`TradingMethod`](../type-aliases/TradingMethod.md)
 
-Defined in: [types/account.ts:66](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L66)
+Defined in: [types/account.ts:85](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L85)
+
+trading method used for the fill
 
 ***
 
@@ -56,7 +66,9 @@ Defined in: [types/account.ts:66](https://github.com/CharmingVenca/trading212mcp
 
 > **type**: [`FillType`](../type-aliases/FillType.md)
 
-Defined in: [types/account.ts:67](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L67)
+Defined in: [types/account.ts:86](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L86)
+
+type of the fill
 
 ***
 
@@ -64,4 +76,6 @@ Defined in: [types/account.ts:67](https://github.com/CharmingVenca/trading212mcp
 
 > **walletImpact**: [`WalletImpact`](WalletImpact.md)
 
-Defined in: [types/account.ts:68](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/account.ts#L68)
+Defined in: [types/account.ts:87](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/account.ts#L87)
+
+impact of this fill on the wallet

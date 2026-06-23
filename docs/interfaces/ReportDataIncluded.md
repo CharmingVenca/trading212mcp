@@ -6,9 +6,9 @@
 
 # Interface: ReportDataIncluded
 
-Defined in: [types/reports.ts:9](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L9)
+Defined in: [types/reports.ts:13](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L13)
 
-Flags for data categories to include in a report.
+Flags for data categories to include in a report
 
 ## Properties
 
@@ -16,7 +16,9 @@ Flags for data categories to include in a report.
 
 > **includeDividends**: `boolean`
 
-Defined in: [types/reports.ts:10](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L10)
+Defined in: [types/reports.ts:14](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L14)
+
+whether to include dividend data in the report
 
 ***
 
@@ -24,7 +26,9 @@ Defined in: [types/reports.ts:10](https://github.com/CharmingVenca/trading212mcp
 
 > **includeInterest**: `boolean`
 
-Defined in: [types/reports.ts:11](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L11)
+Defined in: [types/reports.ts:15](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L15)
+
+whether to include interest data in the report
 
 ***
 
@@ -32,7 +36,9 @@ Defined in: [types/reports.ts:11](https://github.com/CharmingVenca/trading212mcp
 
 > **includeOrders**: `boolean`
 
-Defined in: [types/reports.ts:12](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L12)
+Defined in: [types/reports.ts:16](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L16)
+
+whether to include order data in the report
 
 ***
 
@@ -40,4 +46,6 @@ Defined in: [types/reports.ts:12](https://github.com/CharmingVenca/trading212mcp
 
 > **includeTransactions**: `boolean`
 
-Defined in: [types/reports.ts:13](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L13)
+Defined in: [types/reports.ts:17](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L17)
+
+whether to include transaction data in the report

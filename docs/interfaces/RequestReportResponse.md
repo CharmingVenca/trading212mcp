@@ -6,9 +6,9 @@
 
 # Interface: RequestReportResponse
 
-Defined in: [types/reports.ts:40](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L40)
+Defined in: [types/reports.ts:54](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L54)
 
-Response received after requesting a report.
+Response received after requesting a report
 
 ## Properties
 
@@ -16,4 +16,6 @@ Response received after requesting a report.
 
 > **reportId**: `number`
 
-Defined in: [types/reports.ts:41](https://github.com/CharmingVenca/trading212mcp/blob/350c907373d7f425526c369053826499fd6c443a/mcp-server/src/types/reports.ts#L41)
+Defined in: [types/reports.ts:55](https://github.com/CharmingVenca/trading212mcp/blob/c394390ce8a88b5bea513cdb31b012f64b6fd930/mcp-server/src/types/reports.ts#L55)
+
+unique identifier of the requested report
