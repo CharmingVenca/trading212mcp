@@ -11,12 +11,16 @@ async function main() {
     const apiKeyArg = process.argv.find(arg => arg.startsWith('--t212-api-key='));
     const secretKeyArg = process.argv.find(arg => arg.startsWith('--t212-secret-key='));
     const baseUrlArg = process.argv.find(arg => arg.startsWith('--t212-base-url='));
+    const disableRateLimitingArg = process.argv.find(arg => arg === '--disable-rate-limiting');
+    const debugArg = process.argv.find(arg => arg === '--debug');
 
     console.error('\[mcp\] Starting Trading212 MCP Server v' + pkg.version);
 
     const apiKey = apiKeyArg?.split('=')[1] ?? process.env.TRADING212_API_KEY ?? process.env.T212_API_KEY_ID;
     const secretKey = secretKeyArg?.split('=')[1] ?? process.env.TRADING212_SECRET_KEY ?? process.env.T212_SECRET_KEY;
     const baseUrl = baseUrlArg?.split('=')[1] ?? process.env.TRADING212_BASE_URL;
+    const disableRateLimiting = !!disableRateLimitingArg;
+    const debug = !!debugArg;
 
     if (!apiKey) {
         throw new Error('Trading212 API Key is required (e.g., via --t212-api-key=YOUR_API_KEY or TRADING212_API_KEY env var)');
@@ -30,7 +34,7 @@ async function main() {
 
     console.error('\[mcp\] Base URL: ' + baseUrl);
 
-    const client = new Trading212Client(baseUrl, apiKey, secretKey);
+    const client = new Trading212Client(baseUrl, apiKey, secretKey, disableRateLimiting, debug);
     const mcpServer = new Trading212McpServer({
         name: pkg.name,
         version: pkg.version,

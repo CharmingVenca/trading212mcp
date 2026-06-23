@@ -16,6 +16,7 @@ import {
     StopLimitOrderRequest,
     StopOrderRequest
 } from "../types";
+import { RateLimiter } from "./rate-limiter.js";
 
 type httpMethod = 'GET' | 'POST' | 'DELETE';
 
@@ -24,16 +25,26 @@ export class Trading212Client {
     private instrumentsTimestamp: number = 0;
     private exchangesCache: Promise<Exchanges> | null = null;
     private exchangesTimestamp: number = 0;
-    private readonly CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+    private readonly CACHE_TTL = 10 * 60 * 1000;
+    private readonly rateLimiter: RateLimiter;
 
     constructor(
         private readonly baseUrl: string,
         private readonly apiKey: string,
         private readonly apiSecret: string,
+        disableRateLimiting: boolean = false,
+        private readonly debug: boolean = false,
     ) {
+        this.rateLimiter = new RateLimiter(disableRateLimiting, this.debug);
     }
 
     private async request<T>(method: httpMethod, path: string, body?: unknown): Promise<T> {
+        if (this.debug) {
+            console.error(`[Trading212Client] Request: ${method} ${path} Body: ${body ? JSON.stringify(body) : 'N/A'}`);
+        }
+
+        await this.rateLimiter.awaitPermission();
+
         const url = `${this.baseUrl}${path}`;
         const encoded = Buffer.from(`${this.apiKey}:${this.apiSecret}`).toString("base64");
 
@@ -46,8 +57,17 @@ export class Trading212Client {
             body: body ? JSON.stringify(body) : undefined,
         });
 
+        if (this.debug) {
+            console.error(`[Trading212Client] Response: ${response.status} ${response.statusText} Headers: ${JSON.stringify(Object.fromEntries(response.headers.entries()))}`);
+        }
+
+        this.rateLimiter.updateLimits(response.headers);
+
         if (!response.ok) {
             const errorText = await response.text();
+            if (this.debug) {
+                console.error(`[Trading212Client] Error Response Body: ${errorText}`);
+            }
             throw new Error(`T212 API error ${response.status}: ${errorText}`);
         }
 
