@@ -159,9 +159,11 @@ export class Trading212McpServer {
      * Shuts down the server and all active sessions.
      */
     async stop() {
-        const closePromises = Array.from(this.sessions.values()).map(async ({ server, transport }) => {
+        const closePromises: Promise<any>[] = [];
+
+        Array.from(this.sessions.values()).forEach(async ({ transport }) => {
             try {
-                await server.close();
+                closePromises.push(transport.close());
             } catch (err) {
                 console.error(`[mcp] Error closing session ${transport.sessionId}:`, err);
             }
