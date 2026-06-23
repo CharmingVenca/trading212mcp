@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run clean && npm run build",
     "start": "node dist/cli.js",
     "clean": "rm -rf dist",
-    "docs": "typedoc"
+    "docs": "typedoc --plugin typedoc-plugin-markdown --out ../docs"
   },
   "keywords": [],
   "author": "",
